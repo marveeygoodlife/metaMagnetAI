@@ -38,7 +38,7 @@ header {
     align-items: center;
     justify-content: center;
   }
-  main.signup-page {
+  main.maincontainer {
     margin-bottom: 3rem;
   }
 section.formContainer {
@@ -57,7 +57,7 @@ label:hover, p:hover {
     color: black;
 }
 
-#form {
+.form {
       display: flex;
     flex-direction: column;
      width: 100%;
@@ -93,7 +93,7 @@ button { position: relative;
     font-size: 14px;
      margin: 1rem auto;
      text-align: center;
-    width: 100%;
+    width: 80%;
     transition: all 0.3s ease;
 }
 button:hover {

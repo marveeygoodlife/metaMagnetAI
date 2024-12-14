@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
- console.log('Javascript is connected');
+ console.log('Main Javascript is connected');
+
   const form = document.getElementById('form');
+
 form.addEventListener('submit', (event) => {
 event.preventDefault(); //prevent form submittion
 
@@ -30,12 +32,15 @@ if(!confirmpassword) {
   return;
 }
 
+if(password !== confirmpassword) {
+  alert('password do not match');
+}
+
 // submit form if all input are validated
 console.log('Form successfully submitted!');
 form.submit();
-console.log(firstName && lastName && email);   
 });
-console.log_(`${username} ${email} ${password} ${confirmpassword}`);
+
 function validateEmail(email) {
   const validemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return validemail.test((email).toLowerCase());
