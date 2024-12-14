@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header><div>    <h1>Create Your Account</h1></div></header>
+
+  <main class="container">
+    <section class="form-container">
+        <div class="form-content"><h2>SIGN UP NOW</h2>
+            <p>sign up to interact with new friends all over africa!</p></div>
+
+    <form id="signup-form" method="post" action="/signup">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" title="Enter Username" placeholder="Enter your username" autofocus autocomplete="username">
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" title="Enter email" placeholder="Enter your email"   autocomplete="email">
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" title="Enter password" placeholder="Enter your password"   autocomplete="new-password">
+      
+      <label for="confirmpassword">Confirm Password:</label>
+      <input type="password" id="confirmpassword" name="confirmpassword" title="Enter password" placeholder="Confirm password"   autocomplete="new-password">
+      
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="paragraph"><p>Already have an account? <a href="/login.html">Login here</a></p></div>
+</section>
+  </main>
+  <footer>
+    <div class="license">
+        <p>&copy;&nbsp;Al right reserved, 2024</p></div> 
+        <div class="author">
+            <p>Developer:&nbsp;Marveey Goodlife</p>
+        </div>    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
