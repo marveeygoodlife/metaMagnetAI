@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Login page</title>
 </head>
 <body>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cum laboriosam eius placeat adipisci aspernatur repellat dolor ipsum libero nesciunt. Molestiae harum soluta placeat eaque fugiat officiis assumenda. Eos, soluta?</p> 
+    <header aria-label="header"><p>MetaMagnetAI</p></header>
+
+    <main class="container" aria-label="main content">
+        <section class="formContainer">
+
+  <h1>Login Page</h1>
+
+  <div class="container">
+
+     <form action="/login" method="POST" class="form" aria-labelledby="form" autocomplete="on" aria-label="Sign Up Form" id="loginform">
+
+    <label for="loginusername">Username:</label>
+    <input type="text" id="loginusername" name="loginusername" required autofocus autocomplete="username" placeholder="Enter your username">
+
+    <label for="loginpassword">Password:</label>
+    <input type="loginpassword" id="loginpassword" name="loginpassword" required    autocomplete="current-password" placeholder="Enter your password">
+
+    <button type="submit">Login</button>
+  </form>
+
+</div>
+<p>Don't have an account? <a href="signup.html">Sign up  now</a></p>
+</section>
+</main>
 </body>
 </html>

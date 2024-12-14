@@ -8,12 +8,17 @@
 </head>
 <body>
   <header aria-label="header"><p>MetaMagnetAI</p></header>
-  <main class="signup-page" aria-label="main content">
+
+  <main class=" maincontainer" aria-label="main content">
+
+
     <section class="formContainer">
     <h1>Create Your Account</h1>
     <div class="container">
       
-    <form id="form" method="post" action="/submit" aria-labelledby="form" autocomplete="on" aria-label="Sign Up Form">
+    <form id="form" method="post" action="/submit" aria-labelledby="form" autocomplete="on" aria-label="Sign Up Form" class="form">
+
+
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" autofocus autocomplete="username" placeholder="Enter Username">
       
@@ -29,10 +34,41 @@
       <button type="submit">Sign Up</button>
     </form>
   </div>
-    <p>Already have an account? <a href="login">Login here</a></p>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
   </section>
 
   </main>
   <script src="script.js"></script>
-</body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    console.log('Redirect JavaScript connected');
+
+    const form = document.getElementById('form');
+
+    // Add event listener for form submission
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Prevent the default form submission behavior
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch('/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                // Redirect to the login page after successful signup
+                window.location.href = '/login'; // This redirects to the login page after submission
+            } else {
+                alert('Form submission failed. Please try again');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
+    });
+});
+
+  </script>
+ </body>
 </html>
