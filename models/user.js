@@ -17,6 +17,6 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-const User = mongoose.model('User', userSchema
-);
-module.exports - User;
+const newUser = mongoose.model('user', userSchema);
+console.log('USER MODEL CONNECTED!!')
+module.exports = newUser;
